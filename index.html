@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mohammed Aman Ullah | Professor of Mathematics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ===== BACKGROUND CANVASES ===== -->
+    <canvas id="three-canvas"></canvas>
+    <canvas id="rain-canvas"></canvas>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">AMAN ULLAH</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#scholarships">Scholarships</a></li>
+            <li><a href="#conferences">Conferences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg-symbols" id="heroSymbols"></div>
+
+        <div class="cube-container">
+            <div class="cube">
+                <div class="cube-face">∑</div>
+                <div class="cube-face">∫</div>
+                <div class="cube-face">π</div>
+                <div class="cube-face">∞</div>
+                <div class="cube-face">√</div>
+                <div class="cube-face">Δ</div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-photo-wrapper">
+                <div class="photo-card">
+                    <img src="https://cu.ac.bd/assets/image/faculty_staff_users/455_W84AZRP4MN.jpg"
+                        alt="Dr. Mohammed Aman Ullah"
+                        onerror="this.src='https://via.placeholder.com/300x380/111128/00f0ff?text=Photo'">
+                </div>
+            </div>
+
+            <div class="hero-text">
+                <span class="badge">Professor of Mathematics</span>
+                <h1>Dr. Mohammed<br>Aman Ullah</h1>
+                <p class="subtitle">Department of Mathematics</p>
+                <p class="dept">University of Chittagong, Bangladesh</p>
+                <div class="equation-cycle" id="equation-cycle"></div>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">Explore Profile</a>
+                    <a href="mailto:aman@cu.ac.bd" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+        <div class="section-header reveal">
+            <span class="section-tag">About</span>
+            <h2>Biography &amp; Details</h2>
+            <p>Academic profile, contact information, and professional summary.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="glass-card about-text reveal">
+                <p>
+                    <strong>Dr. Mohammed Aman Ullah</strong> is a Professor in the Department of Mathematics at the
+                    University of Chittagong, Bangladesh. He earned his Ph.D. in Mathematics from
+                    <strong>Shanghai University, China</strong>, specializing in numerical simulations of material
+                    interfaces using conservative front-tracking methods.
+                </p>
+                <p>
+                    His research spans computational mathematics, computational fluid dynamics, interfacial
+                    instability, numerical methods, general theory of relativity, and mathematical biology.
+                    He has published in reputable journals including <em>PLOS ONE</em>, <em>Springer Nature</em>,
+                    and the <em>Journal of Computational Physics: X</em>.
+                </p>
+                <p>
+                    Dr. Ullah has served as <strong>Chairman</strong> of the Department of Mathematics (2021–2024)
+                    and has been recognized with a Gold Medal and several scholarships for academic excellence.
+                </p>
+            </div>
+
+            <div class="glass-card reveal">
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <div class="label">Email</div>
+                            <div class="value"><a href="mailto:aman@cu.ac.bd">aman@cu.ac.bd</a></div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div>
+                            <div class="label">Mobile</div>
+                            <div class="value">01819635551</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🩸</div>
+                        <div>
+                            <div class="label">Blood Group</div>
+                            <div class="value">A+</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🏛️</div>
+                        <div>
+                            <div class="label">Department</div>
+                            <div class="value">Mathematics</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <div class="label">University</div>
+                            <div class="value">University of Chittagong, Chittagong-4331</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🔗</div>
+                        <div>
+                            <div class="label">Official Profile</div>
+                            <div class="value">
+                                <a href="https://cu.ac.bd/public_profile/index.php?ein=4070" target="_blank"
+                                    rel="noopener">
+                                    cu.ac.bd/public_profile
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mathematical Visualization -->
+        <div class="math-visual-card glass-card reveal">
+            <div class="math-visual-header">
+                <span class="section-tag">Live Mathematical Visualization</span>
+                <h3>Lissajous Curve</h3>
+                <p>Parametric equation: x = A·sin(at + δ), y = B·sin(bt) — animated in real time</p>
+            </div>
+            <canvas id="lissajous-canvas"></canvas>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section" id="education">
+        <div class="section-header reveal">
+            <span class="section-tag">Education</span>
+            <h2>Academic Qualifications</h2>
+            <p>Doctoral, Master’s, and Bachelor’s degrees in mathematics.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="date">2006 – 2011</div>
+                    <h3>Ph.D. in Mathematics</h3>
+                    <div class="institution">Shanghai University, Shanghai, China</div>
+                    <div class="detail">
+                        Dissertation: Numerical Simulations of Material Interfaces Using Conservative Front Tracking
+                        Method
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="date">1996</div>
+                    <h3>M.Sc. (Thesis) in Applied Mathematics</h3>
+                    <div class="institution">University of Chittagong, Bangladesh</div>
+                    <div class="detail">Thesis: Space-Time Structure and Gravitation</div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="date">1995</div>
+                    <h3>B.Sc. (Honours) in Mathematics</h3>
+                    <div class="institution">University of Chittagong, Bangladesh</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section" id="experience">
+        <div class="section-header reveal">
+            <span class="section-tag">Experience</span>
+            <h2>Professional Journey</h2>
+            <p>Academic appointments and administrative leadership.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="date">Jun 2016 – Present</div>
+                    <h3>Professor</h3>
+                    <div class="institution">University of Chittagong</div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="date">Mar 2012 – Jun 2016</div>
+                    <h3>Associate Professor</h3>
+                    <div class="institution">University of Chittagong</div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="date">Aug 2004 – Mar 2012</div>
+                    <h3>Assistant Professor</h3>
+                    <div class="institution">University of Chittagong</div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="date">Oct 2002 – Aug 2004</div>
+                    <h3>Lecturer</h3>
+                    <div class="institution">University of Chittagong</div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card" style="border-color: rgba(168,85,247,0.25);">
+                    <div class="date" style="color: var(--neon-purple);">Jul 2021 – Jul 2024</div>
+                    <h3>Chairman, Department of Mathematics</h3>
+                    <div class="institution">University of Chittagong</div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card" style="border-color: rgba(168,85,247,0.25);">
+                    <div class="date" style="color: var(--neon-purple);">Jan 2018 – Jul 2019</div>
+                    <h3>Vice-President, Campus Club</h3>
+                    <div class="institution">University of Chittagong</div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-card" style="border-color: rgba(168,85,247,0.25);">
+                    <div class="date" style="color: var(--neon-purple);">Apr 2005 – Sep 2007</div>
+                    <h3>House Tutor, Pritilata Hall</h3>
+                    <div class="institution">University of Chittagong</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESEARCH INTERESTS ===== -->
+    <section class="section" id="research">
+        <div class="section-header reveal">
+            <span class="section-tag">Research</span>
+            <h2>Areas of Interest</h2>
+            <p>Core research domains and specializations.</p>
+        </div>
+
+        <div class="interest-grid">
+            <span class="interest-tag reveal">Computational Mathematics</span>
+            <span class="interest-tag reveal">Computational Fluid Dynamics</span>
+            <span class="interest-tag reveal">Interfacial Instability</span>
+            <span class="interest-tag reveal">Numerical Methods</span>
+            <span class="interest-tag reveal">General Theory of Relativity</span>
+            <span class="interest-tag reveal">Mathematical Biology</span>
+        </div>
+    </section>
+
+    <!-- ===== PUBLICATIONS ===== -->
+    <section class="section" id="publications">
+        <div class="section-header reveal">
+            <span class="section-tag">Publications</span>
+            <h2>Complete Journal Publication List</h2>
+            <p>Peer-reviewed journal articles, spanning 2010–2026.</p>
+        </div>
+
+        <div class="pub-list">
+            <div class="pub-card reveal">
+                <h3>Caputo fractional-order SVIR model for rotavirus: Numerical solutions using Laplace-Adomian
+                    decomposition method</h3>
+                <div class="authors">Monowar Hossain and Mohammed Aman Ullah</div>
+                <div class="journal">PLOS ONE</div>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>A new hybrid Laplace Adomian variational iteration method for solving nonlinear time-fractional
+                    partial differential equations</h3>
+                <div class="authors">Monowar Hossain &amp; Mohammed Aman Ullah</div>
+                <div class="journal">Annali dell'Università di Ferrara | Springer Nature Link</div>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Comparative semi-analytical solutions of Caputo time-fractional Fokker–Planck equations via Laplace
+                    transform–based decomposition and iterative methods</h3>
+                <div class="authors">Monowar Hossain &amp; Mohammed Aman Ullah</div>
+                <div class="journal">Iranian Journal of Numerical Analysis and Optimization (IJNAO)</div>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Laplace Adomian decomposition method and Laplace variational iteration method approaches to the
+                    nonlinear space-time fractional Fokker-Planck equation</h3>
+                <div class="authors">Monowar Hossain and Mohammed Aman Ullah</div>
+                <div class="journal">Ricerche di Matematica | Springer Nature Link</div>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Numerically simulating the missing physical dissipations in a conservative front-tracking method
+                </h3>
+                <div class="authors">Mohammed Aman Ullah and De-kang Mao</div>
+                <div class="journal">Journal of Computational Physics: X, Elsevier</div>
+                <span class="year">2019</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Bianchi Type-V Cosmological Models for Perfect Fluid with Time-Varying Gravitational and
+                    Cosmological Constant</h3>
+                <div class="authors">M. A. Ullah, M. Amjad Hossain and M. Moksud Alam</div>
+                <div class="journal">Journal of Applied Mathematics and Physics</div>
+                <span class="year">2017</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Numerical Solution of Shock-Bubble Interaction</h3>
+                <div class="authors">M. A. Ullah</div>
+                <div class="journal">The Chittagong University Journal of Science</div>
+                <span class="year">2017</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Simulations of fluid interfaces using conservative front-tracking method for 2D Euler system</h3>
+                <div class="authors">M. A. Ullah, M. U. Khandaker and D-kang Mao</div>
+                <div class="journal">Malaysian Journal of Science</div>
+                <span class="year">2016</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Towards front-tracking based on conservation in two space dimensions III, tracking interfaces</h3>
+                <div class="authors">Mohammed Aman Ullah, Wen-bin Gao and De-kang Mao</div>
+                <div class="journal">Journal of Computational Physics, Elsevier</div>
+                <span class="year">2013</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Numerical simulation of Richtmyer-Meshkov instabilities using conservative front-tracking method
+                </h3>
+                <div class="authors">M. A. Ullah, Wen-bin Gao and De-kang Mao</div>
+                <div class="journal">Applied Mathematics and Mechanics (English Edition), Springer</div>
+                <span class="year">2011</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Numerical simulation of a single-mode Richtmyer-Meshkov instability using conservative
+                    front-tracking method</h3>
+                <div class="authors">M. A. Ullah, Gao Wenbin and Mao De-kang</div>
+                <div class="journal">Vietnam Journal of Mathematics</div>
+                <span class="year">2010</span>
+            </div>
+
+            <div class="pub-card reveal">
+                <h3>Conservative Front Tracking Method of Multimaterial Interfaces</h3>
+                <div class="authors">Gao Wenbin, M. A. Ullah and Mao De-kang</div>
+                <div class="journal">Comm. on Appl. Math. and Comput. (in Chinese)</div>
+                <span class="year">2010</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS & LANGUAGES ===== -->
+    <section class="section" id="skills">
+        <div class="section-header reveal">
+            <span class="section-tag">Skills</span>
+            <h2>Technical &amp; Language Proficiency</h2>
+            <p>Software tools and linguistic abilities.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <h4>Programming &amp; Tools</h4>
+                <span class="skill-tag">Fortran 90</span>
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">LaTeX</span>
+                <span class="skill-tag">Windows OS</span>
+            </div>
+
+            <div class="skill-card reveal">
+                <h4>Languages</h4>
+                <div class="lang-item">
+                    <span class="lang-name">Bangla</span>
+                    <span class="lang-level">Native / Bilingual</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">Full Professional</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Chinese</span>
+                    <span class="lang-level">Elementary</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TAUGHT COURSES ===== -->
+    <section class="section" id="teaching">
+        <div class="section-header reveal">
+            <span class="section-tag">Teaching</span>
+            <h2>Courses Taught</h2>
+            <p>Undergraduate and graduate-level mathematics courses.</p>
+        </div>
+
+        <div class="course-grid">
+            <span class="course-tag reveal">Applied Numerical Methods</span>
+            <span class="course-tag reveal">Methods of Applied Mathematics</span>
+            <span class="course-tag reveal">Differential Equations</span>
+            <span class="course-tag reveal">Numerical Analysis</span>
+            <span class="course-tag reveal">Business Mathematics</span>
+            <span class="course-tag reveal">Complex Analysis</span>
+            <span class="course-tag reveal">Linear Algebra</span>
+        </div>
+    </section>
+
+    <!-- ===== AWARDS ===== -->
+    <section class="section" id="awards">
+        <div class="section-header reveal">
+            <span class="section-tag">Recognition</span>
+            <h2>Honors &amp; Awards</h2>
+            <p>Scholarships, fellowships, and academic distinctions.</p>
+        </div>
+
+        <div class="award-grid">
+            <div class="award-card reveal">
+                <span class="award-icon">🏅</span>
+                <h3>Gold Medalist</h3>
+                <p>
+                    For outstanding results in the Master of Science (Thesis) Examination, Faculty of Science, CU.
+                    Awarded by Gull Chemon Ara Trust, Vice-Chancellor, USTC.
+                </p>
+                <span class="award-year">June 1999</span>
+            </div>
+
+            <div class="award-card reveal">
+                <span class="award-icon">🎓</span>
+                <h3>Shanghai Government Scholarship</h3>
+                <p>For Doctoral Program, Shanghai Municipal Government, Shanghai, China.</p>
+                <span class="award-year">Sep 2007</span>
+            </div>
+
+            <div class="award-card reveal">
+                <span class="award-icon">📜</span>
+                <h3>Chittagong University Scholarship</h3>
+                <p>For the First Class First Position in M.Sc. (Thesis) Result, University of Chittagong.</p>
+                <span class="award-year">June 1999</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCHOLARSHIPS & FELLOWSHIPS ===== -->
+    <section class="section" id="scholarships">
+        <div class="section-header reveal">
+            <span class="section-tag">Scholarships</span>
+            <h2>Scholarships &amp; Fellowships</h2>
+            <p>Financial awards and academic fellowships.</p>
+        </div>
+
+        <div class="scholarship-list">
+            <div class="scholarship-card reveal">
+                <h3>Shanghai Government Scholarship for Doctoral Program</h3>
+                <div class="scholarship-meta">Shanghai Municipal Government, Shanghai, China · September 2007</div>
+            </div>
+            <div class="scholarship-card reveal">
+                <h3>Chittagong University Scholarship for the First Class First Position in M.Sc. (Thesis) Result</h3>
+                <div class="scholarship-meta">University of Chittagong · June 1999</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONFERENCES ===== -->
+    <section class="section" id="conferences">
+        <div class="section-header reveal">
+            <span class="section-tag">Conferences</span>
+            <h2>Conference &amp; Seminar Presentations</h2>
+            <p>International and national academic presentations (2001–2019).</p>
+        </div>
+
+        <div class="conf-list">
+            <div class="conf-item reveal">
+                <div>
+                    <div class="conf-title">Numerical Simulations of Single-Mode Richtmyer-Meshkov Instability</div>
+                    <div class="conf-venue">21st International Mathematics Conference, University of Dhaka</div>
+                </div>
+                <span class="conf-year">2019</span>
+            </div>
+
+            <div class="conf-item reveal">
+                <div>
+                    <div class="conf-title">Numerical Simulation of Shock-Bubble Interaction: A Review Work</div>
+                    <div class="conf-venue">20th International Conference of Mathematics, University of Dhaka</div>
+                </div>
+                <span class="conf-year">2017</span>
+            </div>
+
+            <div class="conf-item reveal">
+                <div>
+                    <div class="conf-title">Comparative Numerical Studies of R-M Instabilities with Non-Linear Analysis
+                    </div>
+                    <div class="conf-venue">18th International Mathematics Conference, Independent University Bangladesh
+                    </div>
+                </div>
+                <span class="conf-year">2014</span>
+            </div>
+
+            <div class="conf-item reveal">
+                <div>
+                    <div class="conf-title">Simulation of Fluid Interfaces Using Conservative Front-Tracking Method
+                    </div>
+                    <div class="conf-venue">International Conference on Mathematical Sciences, Nagpur University, India
+                    </div>
+                </div>
+                <span class="conf-year">2012</span>
+            </div>
+
+            <div class="conf-item reveal">
+                <div>
+                    <div class="conf-title">Numerical Simulation of Shock-Bubble Interactions Using Conservative
+                        Front-Tracking Method</div>
+                    <div class="conf-venue">13th International Conference on Hyperbolic Problems, Beijing, China</div>
+                </div>
+                <span class="conf-year">2010</span>
+            </div>
+
+            <div class="conf-item reveal">
+                <div>
+                    <div class="conf-title">Interfacial Instability with Numerical Simulations</div>
+                    <div class="conf-venue">Mathematical Conference, Fudan University, Shanghai, China</div>
+                </div>
+                <span class="conf-year">2009</span>
+            </div>
+
+            <div class="conf-item reveal">
+                <div>
+                    <div class="conf-title">New Interior Static Solutions of Einstein's Equations</div>
+                    <div class="conf-venue">14th Mathematics Conference, University of Dhaka</div>
+                </div>
+                <span class="conf-year">2001</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+        <div class="section-header reveal">
+            <span class="section-tag">Contact</span>
+            <h2>Get in Touch</h2>
+            <p>For academic collaboration, research inquiries, or student supervision.</p>
+        </div>
+
+        <div class="contact-content reveal">
+            <p>
+                Dr. Mohammed Aman Ullah is open to research collaborations and academic discussions.
+                Feel free to reach out via email or phone.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:aman@cu.ac.bd" class="contact-link">📧 aman@cu.ac.bd</a>
+                <a href="tel:+8801819635551" class="contact-link">📱 01819635551</a>
+                <a href="https://cu.ac.bd/public_profile/index.php?ein=4070" target="_blank" rel="noopener"
+                    class="contact-link">
+                    🔗 Official Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>
+            &copy; 2025 Dr. Mohammed Aman Ullah · Professor of Mathematics · University of Chittagong.
+            <br>
+            All information sourced from the
+            <a href="https://cu.ac.bd/public_profile/index.php?ein=4070" target="_blank" rel="noopener">official CU
+                profile</a>.
+        </p>
+    </footer>
+
+</body>
+
+</html>
